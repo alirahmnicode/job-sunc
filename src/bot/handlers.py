@@ -26,6 +26,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(
             f"looking for {user_job_title} job offers for you."
         )
+        print("start")
         results = requests.get(
             "https://jobinja.ir/jobs?&filters%5Bjob_categories%5D%5B%5D=&filters%5Bkeywords%5D%5B0%5D=django&filters%5Blocations%5D%5B%5D=&preferred_before=1722602906&sort_by=relevance_desc",
             proxies={"http": "45.131.4.71:80"},
