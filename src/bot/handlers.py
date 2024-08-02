@@ -29,7 +29,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         print("start")
         results = requests.get(
             "https://github.com/",
-            # proxies={"http": "45.131.4.71:80"},
+            proxies={"http": "45.131.4.71:80"},
         )
         print(results)
         # for page in results:
